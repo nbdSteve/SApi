@@ -1,9 +1,9 @@
 package gg.steve.mc.frameworks.files;
 
-public class ConfigurationFile extends AbstractDataFile {
+public class SConfigurationFile extends AbstractDataFile {
 
-    public ConfigurationFile(String path) {
-        super(path);
+    public SConfigurationFile(String path) {
+        super(path, FileType.CONFIGURATION);
     }
 
     @Override

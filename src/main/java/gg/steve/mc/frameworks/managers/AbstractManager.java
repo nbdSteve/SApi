@@ -16,6 +16,20 @@ public abstract class AbstractManager {
         managers.add(manager);
     }
 
+    public static void loadManagers() {
+        if (managers == null || managers.isEmpty()) return;
+        for (AbstractManager manager : managers) {
+            manager.onLoad();
+        }
+    }
+
+    public static void shutdownManagers() {
+        if (managers == null || managers.isEmpty()) return;
+        for (AbstractManager manager : managers) {
+            manager.onShutdown();
+        }
+    }
+
     public static List<AbstractManager> getActiveManagers() {
         initialiseManagerList();
         return managers;

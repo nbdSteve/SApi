@@ -13,9 +13,11 @@ public abstract class AbstractDataFile {
     private YamlConfiguration configuration;
     private File file;
     private String path;
+    private FileType type;
 
-    public AbstractDataFile(String path) {
+    public AbstractDataFile(String path, FileType type) {
         this.path = path;
+        this.type = type;
         this.load();
     }
 
@@ -58,5 +60,9 @@ public abstract class AbstractDataFile {
 
     public File getFile() {
         return this.file;
+    }
+
+    public FileType getType() {
+        return type;
     }
 }

@@ -1,15 +1,13 @@
 package gg.steve.mc.frameworks.files;
 
-import gg.steve.mc.frameworks.SApi;
-
 import java.io.File;
 import java.util.UUID;
 
-public class PlayerDataFile extends AbstractDataFile {
+public class SPlayerDataFile extends AbstractDataFile {
     private UUID playerId;
 
-    public PlayerDataFile(UUID playerId) {
-        super(SApi.getPlayerDataFolder() + File.separator + String.valueOf(playerId));
+    public SPlayerDataFile(UUID playerId) {
+        super(FileType.PLAYER.getParentFolder() + File.separator + String.valueOf(playerId), FileType.PLAYER);
     }
 
     @Override
