@@ -1,0 +1,10 @@
+name: CustomPlugin
+version: ${project.version}
+main: gg.steve.mc.pp.CustomPlugin
+api-version: 1.17
+prefix: CustomPlugin
+depend: [ Vault ]
+softdepend: [ PlaceholderAPI ]
+authors: [ stevegoodhill ]
+description: A custom spigot plugin built off of the SPlugin framework developed by Steve Goodhill for steve.gg development.
+website: https://steve.gg/mc/SPlugin
